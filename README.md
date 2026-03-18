@@ -53,19 +53,20 @@ Installation & Setup
 
 2. Create Virtual Environment
 
-    python -m venv venv
-    venv\Scripts\activate
+    ~ python -m venv venv
+
+    ~ venv\Scripts\activate
 
 3. Install Dependencies
 
-    pip install -r requirements.txt
+    ~ pip install -r requirements.txt
 
 
 Running the Application
 
-    python main.py
+    ~ python main.py
     or
-    uvicorn main:app --reload --port 8000
+    ~ uvicorn main:app --reload --port 8000
 
 * API: http://127.0.0.1:8000
 * Swagger Docs: http://127.0.0.1:8000/docs
@@ -73,7 +74,7 @@ Running the Application
 
 API Endpoints
 
-Web Search
+1.Web Search
 
 POST /search/
 
@@ -87,7 +88,7 @@ Response:
 * Source URLs
 
 
-PDF RAG
+2.PDF RAG
 
 Upload PDF
 
@@ -104,7 +105,7 @@ Response:
 
 
 
-Query PDF
+3.Query PDF
 
 POST /pdf/query
 
