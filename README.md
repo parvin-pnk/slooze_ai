@@ -2,7 +2,7 @@
 
 A multi-modal AI Agent built using FastAPI that combines real-time web search and document-based RAG.
 
-# Features
+Features
 
 AI Web Search Agent
   -Real-time search using Tavily API
