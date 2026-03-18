@@ -1,21 +1,21 @@
-#AI Agent: Web Search & PDF RAG System
+# AI Agent: Web Search & PDF RAG System
 
 A multi-modal AI Agent built using FastAPI that combines real-time web search and document-based RAG.
 
 # Features
 
-**AI Web Search Agent**
+AI Web Search Agent
   -Real-time search using Tavily API
   -results using LLM
 
-**PDF RAG System**
+PDF RAG System
 
   -upload and process PDFs
   -Semantic search using FAISS
   -Context-aware question answering
 
 
-## Web Search Flow
+Web Search Flow
 
 1. User Query
 2. Tavily API Search
@@ -23,7 +23,7 @@ A multi-modal AI Agent built using FastAPI that combines real-time web search an
 4. Pass context to LLM
 5. Generate synthesized answer
 
-## PDF RAG Pipeline
+PDF RAG Pipeline
 
 1. PDF Upload → Text Extraction
 2. Text Chunking (semantic splitting)
@@ -35,50 +35,47 @@ A multi-modal AI Agent built using FastAPI that combines real-time web search an
 8. Final Answer Generation
 
 
-# Tech Stack
+Tech Stack
 
-* **Framework:** FastAPI (Python)
-* **LLM Provider:** OpenRouter (NVIDIA Nemotron 120B)
-* **Search Tool:** Tavily API
-* **Vector Store:** FAISS
-* **Embeddings:** Sentence-Transformers (all-MiniLM-L6-v2)
+- Framework: FastAPI (Python)
+- LLM Provider: OpenRouter (NVIDIA Nemotron 120B)
+- Search Tool: Tavily API
+- Vector Store: FAISS
+- Embeddings: Sentence-Transformers (all-MiniLM-L6-v2)
 
 
-
-# Installation & Setup
+Installation & Setup
 
 1. Clone Repository
 
-
-git clone <your-repo-url>
-cd slooze_ai
+    git clone <your-repo-url>
+    cd slooze_ai
 
 2. Create Virtual Environment
 
-python -m venv venv
-venv\Scripts\activate
+    python -m venv venv
+    venv\Scripts\activate
 
 3. Install Dependencies
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 
-# ▶️ Running the Application
+Running the Application
 
-python main.py
-or
-uvicorn main:app --reload --port 8000
+    python main.py
+    or
+    uvicorn main:app --reload --port 8000
 
 * API: http://127.0.0.1:8000
 * Swagger Docs: http://127.0.0.1:8000/docs
 
----
 
-# API Endpoints
+API Endpoints
 
-## Web Search
+Web Search
 
-**POST /search/**
+POST /search/
 
 Request:
 {
@@ -90,11 +87,11 @@ Response:
 * Source URLs
 
 
-## PDF RAG
+PDF RAG
 
-### Upload PDF
+Upload PDF
 
-**POST /pdf/process**
+POST /pdf/process
 
 * Input: `multipart/form-data`
 * Key: `file`
@@ -107,9 +104,9 @@ Response:
 
 
 
-### Query PDF
+Query PDF
 
-**POST /pdf/query**
+POST /pdf/query
 
 
 {
@@ -125,16 +122,14 @@ Response:
 
 
 
-# Testing
+Testing
 
 python check_llm.py      # Verify LLM connectivity
 python check_tavily.py  # Verify search API
 
 
 
-
-
-# Conclusion
+Conclusion
 
 This project demonstrates a **real-world AI system design**, combining:
 
